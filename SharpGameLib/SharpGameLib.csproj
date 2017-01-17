@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E335D76B-0D4F-45B4-88E6-2794E43EE870}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SharpGameLib</RootNamespace>
+    <AssemblyName>SharpGameLib</AssemblyName>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DefaultGameStage.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="SpriteConfig.cs" />
+    <Compile Include="TaskQueue.cs" />
+    <Compile Include="ValueChangedEventArgs.cs" />
+    <Compile Include="Vector2Ext.cs" />
+    <Compile Include="Ai\AiContainer.cs" />
+    <Compile Include="Ai\AiControllerBase.cs" />
+    <Compile Include="Ai\LinearPsuedoRandomGenerator.cs" />
+    <Compile Include="Ai\TargetingAiControllerBase.cs" />
+    <Compile Include="Ai\Interfaces\IAiController.cs" />
+    <Compile Include="Ai\Interfaces\ITargetingAiController.cs" />
+    <Compile Include="Collision\CollidableBase.cs" />
+    <Compile Include="Collision\CollisionEdge.cs" />
+    <Compile Include="Collision\CollisionEventArgs.cs" />
+    <Compile Include="Collision\CollisionModel.cs" />
+    <Compile Include="Collision\CollisionMoment.cs" />
+    <Compile Include="Collision\DefaultCollisionContainer.cs" />
+    <Compile Include="Collision\EntityCollidableBase.cs" />
+    <Compile Include="Collision\LineSegment.cs" />
+    <Compile Include="Collision\MathUtils.cs" />
+    <Compile Include="Collision\ProcessingCompleteEventArgs.cs" />
+    <Compile Include="Collision\RectangleF.cs" />
+    <Compile Include="Collision\Interfaces\ICollidable.cs" />
+    <Compile Include="Collision\Interfaces\ICollisionContainer.cs" />
+    <Compile Include="Collision\Interfaces\IEntityCollidable.cs" />
+    <Compile Include="Commands\PauseCommand.cs" />
+    <Compile Include="Commands\QuitCommand.cs" />
+    <Compile Include="Commands\ResetLevelCommand.cs" />
+    <Compile Include="Commands\ToggleCollisionOverlayCommand.cs" />
+    <Compile Include="Commands\Gui\DownCommand.cs" />
+    <Compile Include="Commands\Gui\LeftCommand.cs" />
+    <Compile Include="Commands\Gui\RightCommand.cs" />
+    <Compile Include="Commands\Gui\SelectCommand.cs" />
+    <Compile Include="Commands\Gui\UpCommand.cs" />
+    <Compile Include="Commands\Interfaces\IGuiCommandReceiver.cs" />
+    <Compile Include="Commands\Interfaces\IPauseCommandReceiver.cs" />
+    <Compile Include="Commands\Interfaces\IQuitCommandReceiver.cs" />
+    <Compile Include="Commands\Interfaces\IResetLevelCommandReceiver.cs" />
+    <Compile Include="Commands\Interfaces\IToggleCollisionOverlayCommandReceiver.cs" />
+    <Compile Include="Effects\DefaultParticle.cs" />
+    <Compile Include="Effects\DefaultParticleEmitter.cs" />
+    <Compile Include="Effects\Interfaces\IParticle.cs" />
+    <Compile Include="Effects\Interfaces\IParticleEmitter.cs" />
+    <Compile Include="Entities\DefaultEntityLoader.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\EntityDataBase.cs" />
+    <Compile Include="Entities\EntityManagerBase.cs" />
+    <Compile Include="Entities\NullEntityData.cs" />
+    <Compile Include="Entities\SpriteConfigResolverBase.cs" />
+    <Compile Include="Entities\Interfaces\IEntity.cs" />
+    <Compile Include="Entities\Interfaces\IEntityData.cs" />
+    <Compile Include="Entities\Interfaces\IEntityFactory.cs" />
+    <Compile Include="Entities\Interfaces\IEntityLoader.cs" />
+    <Compile Include="Entities\Interfaces\IEntityManager.cs" />
+    <Compile Include="Entities\Interfaces\IProjectileEntity.cs" />
+    <Compile Include="Entities\Interfaces\ISpriteConfigResolver.cs" />
+    <Compile Include="Entities\Interfaces\ITargetableEntity.cs" />
+    <Compile Include="Graphics\Fonts.cs" />
+    <Compile Include="Graphics\SpriteBatchCanvas.cs" />
+    <Compile Include="Graphics\TextureBackground.cs" />
+    <Compile Include="Graphics\TextureSpriteSheet.cs" />
+    <Compile Include="Graphics\Interfaces\IBackground.cs" />
+    <Compile Include="Graphics\Interfaces\ICanvas.cs" />
+    <Compile Include="Gui\GuiAnimator.cs" />
+    <Compile Include="Gui\GuiElementBase.cs" />
+    <Compile Include="Gui\GuiElementChooser.cs" />
+    <Compile Include="Gui\GuiOptions.cs" />
+    <Compile Include="Gui\GuiSprite.cs" />
+    <Compile Include="Gui\GuiText.cs" />
+    <Compile Include="Gui\Interfaces\IGuiElement.cs" />
+    <Compile Include="Input\GamePadController.cs" />
+    <Compile Include="Input\InputControllerBase.cs" />
+    <Compile Include="Input\InputState.cs" />
+    <Compile Include="Input\KeyboardController.cs" />
+    <Compile Include="Input\Config\NullControllerConfig.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="Interfaces\IControllerConfig.cs" />
+    <Compile Include="Interfaces\IDrawable.cs" />
+    <Compile Include="Interfaces\IGameContext.cs" />
+    <Compile Include="Interfaces\IHUD.cs" />
+    <Compile Include="Interfaces\IMovable.cs" />
+    <Compile Include="Interfaces\IScene.cs" />
+    <Compile Include="Interfaces\IStage.cs" />
+    <Compile Include="Interfaces\IStageActor.cs" />
+    <Compile Include="Interfaces\IUpdatable.cs" />
+    <Compile Include="Scrolling\Camera.cs" />
+    <Compile Include="Sound\SoundFX.cs" />
+    <Compile Include="Sprites\DefaultAnimatedSprite.cs" />
+    <Compile Include="Sprites\DefaultAnimatedSpriteFactory.cs" />
+    <Compile Include="Sprites\DefaultStaticSprite.cs" />
+    <Compile Include="Sprites\DefaultStaticSpriteFactory.cs" />
+    <Compile Include="Sprites\SpriteAnimatorBase.cs" />
+    <Compile Include="Sprites\SpriteBase.cs" />
+    <Compile Include="Sprites\SpriteColorAnimator.cs" />
+    <Compile Include="Sprites\Interfaces\ISprite.cs" />
+    <Compile Include="Sprites\Interfaces\ISpriteAnimator.cs" />
+    <Compile Include="Sprites\Interfaces\ISpriteFactory.cs" />
+    <Compile Include="Sprites\Interfaces\ISpriteSheet.cs" />
+    <Compile Include="States\AutoCacheStateFactory.cs" />
+    <Compile Include="States\StateBase.cs" />
+    <Compile Include="States\StateFactoryBase.cs" />
+    <Compile Include="States\StateMachineBase.cs" />
+    <Compile Include="States\Interfaces\IState.cs" />
+    <Compile Include="States\Interfaces\IStateFactory.cs" />
+    <Compile Include="States\Interfaces\IStateMachine.cs" />
+    <Compile Include="Level\JsonEntityData.cs" />
+    <Compile Include="Level\JsonEntityDataConverter.cs" />
+    <Compile Include="Level\JsonLevelLoader.cs" />
+    <Compile Include="Level\JsonReaderExt.cs" />
+    <Compile Include="Level\JsonVector2DataConverter.cs" />
+    <Compile Include="Level\Interfaces\ILevel.cs" />
+    <Compile Include="Level\Interfaces\ILevelLoader.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Math\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\MonoGame.Framework.Portable.3.2.99.1-Beta\lib\portable-net40+sl40+win+wp80\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="120" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
+          <CSharpFormattingPolicy IndentSwitchBody="True" IndentBlocksInsideExpressions="True" AnonymousMethodBraceStyle="NextLine" PropertyBraceStyle="NextLine" PropertyGetBraceStyle="NextLine" PropertySetBraceStyle="NextLine" EventBraceStyle="NextLine" EventAddBraceStyle="NextLine" EventRemoveBraceStyle="NextLine" StatementBraceStyle="NextLine" ElseNewLinePlacement="NewLine" CatchNewLinePlacement="NewLine" FinallyNewLinePlacement="NewLine" WhileNewLinePlacement="DoNotCare" ArrayInitializerWrapping="DoNotChange" ArrayInitializerBraceStyle="NextLine" BeforeMethodDeclarationParentheses="False" BeforeMethodCallParentheses="False" BeforeConstructorDeclarationParentheses="False" NewLineBeforeConstructorInitializerColon="NewLine" NewLineAfterConstructorInitializerColon="SameLine" BeforeDelegateDeclarationParentheses="False" NewParentheses="False" SpacesBeforeBrackets="False" inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

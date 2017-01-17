@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{D8EDA42D-6D46-4573-8A70-281E56251401}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharpGameLib</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DefaultGameStage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TaskQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector2Ext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\CollidableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\CollisionEdge.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\CollisionEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\CollisionModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\CollisionMoment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\DefaultCollisionContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\EntityCollidableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\Interfaces\ICollidable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\Interfaces\ICollisionContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\Interfaces\IEntityCollidable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\LineSegment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\MathUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\ProcessingCompleteEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collision\RectangleF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\DefaultParticle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\DefaultParticleEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Interfaces\IParticle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Interfaces\IParticleEmitter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Fonts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Interfaces\IBackground.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Interfaces\ICanvas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\SpriteBatchCanvas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\TextureBackground.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\TextureSpriteSheet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\GuiAnimator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\GuiElementBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\GuiElementChooser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\GuiOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\GuiText.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\Interfaces\IGuiElement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\Config\NullControllerConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\GamePadController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\InputControllerBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\InputState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\KeyboardController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IControllerConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDrawable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IGameContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IHUD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IMovable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IStage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IStageActor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IUpdatable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\Interfaces\ILevel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\Interfaces\ILevelLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\JsonEntityData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\JsonEntityDataConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\JsonReaderExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\JsonVector2DataConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Scrolling\Camera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\DefaultAnimatedSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\DefaultAnimatedSpriteFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\DefaultStaticSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\DefaultStaticSpriteFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\Interfaces\ISprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\Interfaces\ISpriteAnimator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\Interfaces\ISpriteFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\Interfaces\ISpriteSheet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\SpriteAnimatorBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\SpriteBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprites\SpriteColorAnimator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IEntityData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IEntityFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IEntityLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IProjectileEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\ISpriteConfigResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\DefaultEntityLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\EntityBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\SpriteConfigResolverBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\SoundFX.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\Interfaces\IState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\Interfaces\IStateFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\Interfaces\IStateMachine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\AutoCacheStateFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\StateBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\StateMachineBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Interfaces\IGuiCommandReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Interfaces\IQuitCommandReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Interfaces\IResetLevelCommandReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Interfaces\IToggleCollisionOverlayCommandReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Interfaces\IPauseCommandReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\PauseCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\QuitCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ResetLevelCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ToggleCollisionOverlayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Gui\DownCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Gui\LeftCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Gui\RightCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Gui\SelectCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\Gui\UpCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpriteConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Level\JsonLevelLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)States\StateFactoryBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ai\AiContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ai\AiControllerBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ai\Interfaces\IAiController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ai\Interfaces\ITargetingAiController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ai\TargetingAiControllerBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\ITargetableEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui\GuiSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\NullEntityData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\EntityDataBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Interfaces\IEntityManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\EntityManagerBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ai\LinearPsuedoRandomGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Collision\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Effects\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Graphics\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Gui\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Input\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Level\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Scrolling\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Sprites\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Entities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Entities\Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)States\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Sound\" />
+    <Folder Include="$(MSBuildThisFileDirectory)States\Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Commands\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Commands\Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Commands\Gui\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Ai\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Math\" />
+  </ItemGroup>
+</Project>
