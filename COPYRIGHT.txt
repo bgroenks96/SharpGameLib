@@ -1,0 +1,3 @@
+Copyright (C) 2016-2017 Brian Groenke, Bobak Rashidnia, Nicholas Skiljan, Patrick Pastore, Sid Revur
+See LICENSE.txt for terms of use. All rights reserved.
+
